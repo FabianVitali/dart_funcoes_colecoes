@@ -24,11 +24,13 @@ void main() {
   //! Baseado na lista acima.
   //! 1 - Remova os pacientes duplicados e apresente a nova lista
   print('1 - Remova os pacientes duplicados e apresente a nova lista');
-  final removeDuplicados = pessoas.toSet().toList();
-  final listaPacientes = [];
-  removeDuplicados
-      .forEach((paciente) => listaPacientes.add(paciente.split('|')));
+  final listaPacientes = pessoas.toSet().map((e) => e.split('|')).toList();
   listaPacientes.forEach(print);
+  
+  // final removeDuplicados = pessoas.toSet().toList();
+  // final listaPacientes = [];
+  // removeDuplicados.forEach((paciente) => listaPacientes.add(paciente.split('|')));
+  // listaPacientes.forEach(print);
 
   print('');
   //! 2 - Me mostre a quantidade de pessoas por sexo (Masculino e Feminino) e depois me apresente o nome delas
